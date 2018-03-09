@@ -1,0 +1,154 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+header, footer, section,  div, p, img{
+    order: 10;
+}
+.nav_menu{
+    display: none;
+}
+@media screen and (max-width:549px){
+   .header_left{
+       width:60%;
+   }
+   .title{
+        font-size: 1.8em;
+   }  
+    .me{
+        height:48px;
+        width:48px;
+    }
+    .header_right {
+        z-index: 10;
+        width: 300px;
+        position: absolute;
+            /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+            /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+    .header_right.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);   
+    }
+    ul.nav_list{
+        background-color: black;
+    }
+    .nav_item {
+        display:block;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+    }
+  .nav_item a{
+        font-size: 12px;
+    }
+  .nav_menu {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        padding: 1em;
+    }
+  .nav_menu img {
+        width: 32px;
+    }
+  .hire_me{
+        height: 300px;
+        background-size: 100% 100%;
+        background-attachment: inherit;
+    }
+  .about_me{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  .about_me h2{
+        text-align: center;
+        order: 1;
+        width: inherit;
+    }
+  .my_photo{
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        order:2;
+        width:100%;
+    }
+  .about_detail{
+        font-size: 12px;
+        order:3;
+        width:100%;
+    }
+    .skills{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .skills h2{
+        text-align: center;
+        order:1;
+        width:inherit;
+    }
+    .skills .skill-left, .skills .skill-center, .skills .skill-right{
+        width:100%;
+        display: block;
+        float:none;
+        padding:0;
+        margin-left:10px;
+        margin-right: 10px;
+    }
+    .skills  i{
+        font-size: 45px;
+    }
+    .skills .skill-left p, .skills .skill-center p, .skills .skill-right p{
+        font-size: 12px;
+    }
+    .my_projects{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .my_projects h2{
+        width:100%;
+        font-size: 45px;
+    }
+    .my_projects .project-1,.my_projects .project-2, .my_projects .project-3 {
+        width:100%;
+        margin:10px;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        height:auto;
+    }
+    .footer .copyright{
+        width:100%;
+        font-size: 12px;
+        text-align: center;
+    }
+    .footer .social{
+        width:100%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 550px) and (max-width:850px){
+    header{
+        display:block;
+        height:140px;
+    }
+    header .header_left,header .header_right{
+        width:100%;
+        margin:0;
+        height:auto;
+    }
+    header .header_left, header .header_right{
+        text-align: center;
+    }
+    
+    ul.nav_list{
+        display:inline;
+        text-align: center;
+        margin:0;
+        padding:0;
+    }
+
+}
