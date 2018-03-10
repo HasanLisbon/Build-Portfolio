@@ -237,7 +237,7 @@ body, html {
 	overflow: hidden;
 }
 .footer .copyright{
-	width:60%;
+	width:50%;
 	position:relative;
 	
 }
@@ -247,7 +247,7 @@ body, html {
     width: inherit;
 }
 .footer .social{
-	width:40%;
+	width:50%;
 	position:relative;
 	
 }
