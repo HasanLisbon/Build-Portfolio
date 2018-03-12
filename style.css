@@ -150,7 +150,7 @@ p{
 	float:left;
     padding:10px;
 }
-.skills  i{
+.skill-left i,.skill-center i, .skill-right i{
 	font-size: 70px;
 }
 .skills .skill-left p, .skills .skill-center p, .skills .skill-right p{
