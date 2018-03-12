@@ -123,10 +123,7 @@ body, html {
     .my_photo{
     width:45%;
     max-height: 300px;
-    margin-top:20px;
-    margin-left: 20px;
-    margin-right: 20px:
-    margin-bottom: 10px;
+    margin:20px;
 }
     p{
     margin-left: 10px;
