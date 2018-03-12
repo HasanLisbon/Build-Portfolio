@@ -123,8 +123,10 @@ body, html {
     .my_photo{
     width:45%;
     height: auto;
+    margin-top:20px;
     padding-left: 20px;
     padding-bottom: 10px;
+    vertical-align:top
 }
     p{
     width: 50%;
