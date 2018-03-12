@@ -127,7 +127,7 @@ body, html {
     padding-left: 20px;
     padding-bottom: 10px;
 }
-    p{
+    .about_detail{
 	font-family: 'Comfortaa', cursive;
     font-size: 18px;
     text-align: justify;
