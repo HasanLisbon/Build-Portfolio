@@ -1,205 +1,225 @@
-
+* {
+    margin:0;
+    padding:0;
+    height:auto;
+    box-sizing: border-box;
+}
 body, html {
-    margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
   
 body {
-    font-family: Roboto;
-    font-size: 14px;
+    padding-left:5%;
+    padding-right:5%;
+    font: 20px Roboto;
     color: #424242;
 }
-main{
+main {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
-h1, h2, h3, h4, h5 {
-    margin: 0; 
+header, main, footer, div {
+    display: flex;
+    flex-wrap: wrap;
 }
-  
-header, nav, footer, section, article, div {
-    box-sizing: border-box;
+.nav_menu {
+    display: none;
 }
-header{
+header {
 	background:linear-gradient(132deg,#ec5218,#1665c1 );
 	background-size: 400% 400%;
 	animation:backgroundGradient 30s ease infinite;
-	margin:0;
-	height:70px;
+    margin:0;
+    display:flex;
+    flex-wrap: wrap;
+	height:auto;
     width:100%;
 }
-@keyframes backgroundGradient{
+@keyframes backgroundGradient {
 	0%{background-position: 0% 50%}
 	50%{background-position: 100% 50%}
 	100%{background-position: 0% 50%}
 }
 ul{
-      list-style: none;
+    list-style: none;
 }
-.header_left{
-      width:40%;
-      float: left;
-      height:auto;
+.header_left {
+    display: flex;
+    flex-wrap: wrap;
+    width:40%;
+    height:auto;
 }
-.me{
-    width: 70px;
+.me {
+    width:70px;
     height:70px;
+    margin:0;
+    padding:0;
     border-radius: 50%;
     margin-left:20px;
 }
-.title{
-    font-family: 'Rouge Script', cursive;
-    font-weight: bold;
+.title {
+    width:30px;
+    margin:0;
+    font: bold 40px "Rouge Script", cursive;
     color:white;
     text-align: center;
     animation-duration: 10s;
-
 }
-.header_right{
+.header_right {
     width:60%;
     height:inherit;
-    float: right;
     padding-top:20px;
     margin: 0;
 }
-.me, .title{
-    display:inline-block;
-  }
-nav{
-    text-align: end;
-  }
-nav ul li{
-    display: inline;
-    padding:30px;
-      
+nav ul {
+    display: flex;
 }
-nav a{
+nav li {
+    flex: 1;
+    -ms-flex: 1;
+}
+nav a {
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
 }
-.hire_me{
+.hire_me {
     width: 100%;
     height: 600px;
+    position:relative;
     text-align: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: url(image/me-1.png);
     background-attachment: fixed;
 }
-.hire_me h1{
-	font-family: 'Lobster', cursive;
-	font-size: 50px;
-	padding-top: 40px;
+.hire_me h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    width:100%;
+    height:20vh;
+    margin-top: 4%;
+    margin:auto 0;
+    order:1
 }
-    .hire_me h3{
-	font-family: 'Dancing Script', cursive;	
+.hire_me h3 {
+    font-family: 'Dancing Script', cursive;
+    width:100%;
+    height:10vh;
+    margin:1% 0;
+    order:2;
 }
-
-    #hire_btn{
-	width:100px;
+#hire_btn {
+    width:200px;
+    height: auto;
+    margin: 0 auto;
 	font-family: 'Berkshire+Swash', cursive;
 	font-weight: bold;
-	font-size: 20px;
+    font-size: 20px;
+    order:3;
 }
-    #hire_btn a{
+#hire_btn a {
 	text-decoration: none;
 	color:white;
 }
-    .about_me{
-	background-color: #ffb606;
-    width:100%;
+.about_me{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #ffb606;
 }
-    .about_me h2{
-	margin-bottom: 0px;
-    font-family: Abril Fatface;
+.about_me h2{
+    width: 100%;
     text-align: center;
-    padding-bottom: 20px;
+    font-family: Abril Fatface;
+    order:1;
 }
-.my_photo{
-    width:45%;
+.about_me .my_photo {
+    width: 40%;
     max-height: 300px;
-    margin:20px;
+    object-fit: contain;
+    vertical-align: text-top;
+    padding:1%;
+    order: 2;
 }
-p{
-    margin-left: 10px;
-	padding:20px;
-	font-family: 'Comfortaa', cursive;
-    font-size: 18px;
+.about_me .about_detail{
+    width: 60%;
     text-align: justify;
-    
+    padding: 1%;
+    font: bold 1.5em Rouge Script;
+    order:3;
 }
-.skills{
+.skills {
 	background: linear-gradient(to bottom, #ffff99 0%, #ff99cc 100%);;
 	width: 100%;
     padding-top: 20px;
     text-align: center;
 }
-.skills h2{
+.skills h2 {
 	font-family: Rouge Script;
 	font-weight: 700;
 	font-size: 60px;
 }
-.skills .skill-left, .skills .skill-center, .skills .skill-right{
+.skills .skill-left, .skills .skill-center, .skills .skill-right {
 	width:33.333333%;
 	display: inline-block;
 	float:left;
     padding:10px;
 }
-.skills .skill-left i,.skills .skill-center i, .skills .skill-right i{
+.skills .skill-left i,.skills .skill-center i, .skills .skill-right i {
 	font-size: 70px;
 }
-.skills .skill-left p, .skills .skill-center p, .skills .skill-right p{
+.skills .skill-left p, .skills .skill-center p, .skills .skill-right p {
     text-align: justify;
     width: initial;
     margin:0;
     padding: 0;
 }
-.my_projects{
-	width:100%;
+.my_projects {
+    width:100%;
 	background: linear-gradient(to bottom, #ffff66 0%, #99ffcc 100%);;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
 }
-.my_projects h2{
+.my_projects h2 {
 	padding:10px 0 10px 0;
 	font-family: Rouge Script;
 	font-weight: 700;
 	font-size: 70px;
 }
-.my_projects .project-1, .my_projects .project-2, .my_projects .project-3{
+.my_projects .project-1, .my_projects .project-2, .my_projects .project-3 {
 	height:250px;
 	width:30%;
 	float:left;
 	position:relative;
 	overflow: hidden;
 }
-.my_projects .project-1{
+.my_projects .project-1 {
 	margin-left:2%;
 	margin-right: 1.5%;
 	background-image: url(image/animalCard.png);
 	background-size: 100% 100%;
 }
-.my_projects .project-2{
+.my_projects .project-2 {
 	margin-left:1%;
 	margin-right: 1%;
 	background-image: url(image/pixelArt.png);
 	background-size: 100% 100%;
 }
-.my_projects .project-3{
+.my_projects .project-3 {
 	margin-left:1.5%;
 	margin-right: 2%;
 	background-image: url(image/tributePage.png);
 	background-size: 100% 100%;
 }
-.my_projects .overlay{
+.my_projects .overlay {
 	height:100%;
-	width:100%;
+    width:100%;
 	padding-top: 310px;
 	position: absolute;
 }
@@ -208,10 +228,11 @@ p{
     padding-top: 130px;
     transition: all .5s ease;
 }
-.overlay a{
+.overlay a {
 	font-family: 'Merriweather', Serif;
-	margin:0;
-	display: inline-block;
+    margin:0 auto;
+    width:100px;
+    height:40px;
     font-size: 14px;
     padding: 10px 10px;
     border: 1px solid #fff;
@@ -220,56 +241,58 @@ p{
     font-weight: bold;
     border-radius: 10px;
 }
-.footer{
-	background-color: rgb(53, 228, 228); 
-	position: relative;
-	width:100%;
-	height:90px;
-	margin:0;
-	padding:10px 10px;
+.footer {
+    background-color: rgb(53, 228, 228);
+    display:flex;
+   /* flex-direction: row;
+    flex-wrap: wrap; */
+    width:100%;
+    height:auto;
+    margin:0;
 }
-.footer .copyright, .footer .social{
-	display: block;
+.footer .copyright, .footer .social {
 	position:relative;
 	margin: 5px;
 	padding:0;
-	text-align: center;
 }
-.footer p{
-	padding: 0;
-	margin: 5px;
-	width: inherit;
+.footer .copyright {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 50%;
+    text-align:center;
+    order:1;
 }
-.social i{
-    display: inline-block;
-    margin:5px;
-	margin-left: 10px;
-	margin-right: 10px;
-
+.footer .social {
+    width:50%;
+    display:inline-block;
+    text-align:center;
+    margin:0 auto;
+    order:2;
 }
-.social .social_1, .social .social_2, .social .social_3, .social .social_4{
+.social i {
+    width: auto;
     font-size: 20px;
-    margin: 20px;
+    margin: 3% 8%;
 }
-.social .social_1:hover{
+.social .social_1:hover {
 	color:#039;
 	border:1px solid #fff;
     border-radius: 50%;
     transition: all .3s ease;
 }
-.social .social_2:hover{
+.social .social_2:hover {
 	color:#0cf;
 	border:1px solid #fff;
     border-radius: 50%;
     transition: all .3s ease;
 }
-.social .social_3:hover{
+.social .social_3:hover {
 	color:red;
 	border:1px solid #fff;
     border-radius: 50%;
     transition: all .3s ease;
 }
-.social .social_4:hover{
+.social .social_4:hover {
 	color:#06f;
 	border:1px solid #fff;
     border-radius: 200%;
