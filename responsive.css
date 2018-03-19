@@ -1,21 +1,15 @@
-main{
-    display: flex;
-    flex-wrap: wrap;
-}
-header, footer, section,  div, p, img{
-    order: 10;
-}
-.nav_menu{
-    display: none;
-}
+
 @media screen and (max-width:549px){
-   .header_left{
+    body{
+        padding: 0;
+    }
+   .header_left {
        width:60%;
    }
-   .title{
+   .title {
         font-size: 1.8em;
    }  
-    .me{
+    .me {
         height:48px;
         width:48px;
     }
@@ -24,70 +18,87 @@ header, footer, section,  div, p, img{
         width: 300px;
         position: absolute;
         -webkit-transform: translate(-300px, 0);
+        -ms-transform: translate(-300px, 0);
+        -moz-transform: translate(-300px, 0);
         transform: translate(-300px, 0);
         transition: transform 0.3s ease;
+        -webkit-transition: transform 0.3s ease;
+        -ms-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
     }
     .header_right.open {
         -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
         transform: translate(0, 0);   
     }
-    ul.nav_list{
+    ul.nav_list {
+        width:40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-center;
+        align-content: space-between;
+        justify-items: center;
         background-color: black;
     }
+    nav ul li {
+        align-self: center;
+        flex:1 1 0;
+        margin: 2%;
+        padding: 5%;
+        height: 20vh;
+    }
     .nav_item {
-        display:block;
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
-        text-align: left;
+        padding-top:5%;
+        text-align: center;
     }
-  .nav_item a{
+    .nav_item a {
         font-size: 12px;
     }
-  .nav_menu {
-        display: inline-block;
+    .nav_menu {
+        display: flex;
+        justify-content: center;
         position: absolute;
         right: 0;
         padding: 1em;
     }
-  .nav_menu img {
+    .nav_menu img {
         width: 32px;
     }
-  .hire_me{
+  . hire_me {
         height: 300px;
         background-size: 100% 100%;
         background-attachment: inherit;
     }
-  .about_me{
-        display: flex;
-        flex-wrap: wrap;
-    }
-  .about_me h2{
+    .about_me h2 {
         text-align: center;
         order: 1;
-        width: inherit;
+        width: 100%;
     }
-  .my_photo{
+    .about_me .my_photo {
         height: 200px;
+        object-fit: cover;
         margin: 0;
         padding: 0;
         order:2;
         width:100%;
     }
-  .about_detail{
+    .about_me .about_detail {
         font-size: 12px;
         order:3;
         width:100%;
     }
-    .skills{
+    .skills {
         display:flex;
         flex-wrap: wrap;
     }
-    .skills h2{
+    .skills h2 {
         text-align: center;
-        order:1;
         width:inherit;
     }
-    .skills .skill-left, .skills .skill-center, .skills .skill-right{
+    .skills .skill-left, .skills .skill-center, .skills .skill-right {
         width:100%;
         display: block;
         float:none;
@@ -95,13 +106,13 @@ header, footer, section,  div, p, img{
         margin-left:10px;
         margin-right: 10px;
     }
-    .skills  i{
+    .skills  i {
         font-size: 45px;
     }
     .skills .skill-left p, .skills .skill-center p, .skills .skill-right p{
         font-size: 12px;
     }
-    .my_projects{
+    .my_projects {
         display: flex;
         flex-wrap: wrap;
     }
@@ -113,12 +124,12 @@ header, footer, section,  div, p, img{
         width:100%;
         margin:10px;
     }
-    .footer{
+    .footer {
         display: flex;
         flex-wrap: wrap;
         height:auto;
     }
-    .footer .copyright{
+    .footer .copyright {
         width:100%;
         font-size: 12px;
         text-align: center;
@@ -128,25 +139,46 @@ header, footer, section,  div, p, img{
         text-align: center;
     }
 }
-@media screen and (min-width: 550px) and (max-width:850px){
-    header{
-        display:block;
-        height:140px;
+@media screen and (min-width: 550px) and (max-width:750px){
+    body{
+        padding:0;
     }
-    header .header_left,header .header_right{
+    header .header_left,header .header_right {
         width:100%;
         margin:0;
         height:auto;
     }
-    header .header_left, header .header_right{
+    header .header_left, header .header_right {
         text-align: center;
     }
-    
-    ul.nav_list{
-        display:inline;
+    header .header_left {
+        margin:0 40%;
+    }
+    .about_me h2 {
+        text-align: center;
+        order: 1;
+        width: 100%;
+    }
+    .about_me .my_photo {
+        order:2;
+        width:100%;
+    }
+    .about_me .about_detail{
+        order:3;
+        width:100%;
+    }
+    .footer {
+        font-size: 12px;
+        text-align: center;
+    }
+    .footer .copyright {
         text-align: center;
         margin:0;
-        padding:0;
+        font-size: 14px;
+        width:100%;
     }
-
+    .footer .social {
+        text-align: center;
+        width:100%;
+    }
 }
